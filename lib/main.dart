@@ -33,10 +33,32 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
       ),
       body: Center(
-        child: Text(
-          'Hello, whats up!',
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Welcome to my App',
+              style: TextStyle(
+                color: Colors.blue, // Set the text color to dark blue
+                fontSize: 24, // You can adjust the font size as needed
+                fontWeight: FontWeight
+                    .bold, // You can change the font weight if desired
+              ),
+            ),
+            Text(
+              'aplikasi ini buatan Jibril',
+            ),
+          ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.search),
+          label: 'Search',
+        ),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'profile'),
+      ]),
     );
   }
 }
